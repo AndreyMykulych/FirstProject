@@ -1,0 +1,12 @@
+.header {
+   grid-area: h;
+   background-color: greenyellow;
+   max-height: 60px;
+ }
+ 
+ .header img {
+   width: 60px;
+   padding: 5px;
+   
+ }
+ 
