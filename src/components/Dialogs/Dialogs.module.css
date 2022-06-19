@@ -24,3 +24,14 @@
     color: white;
 
 }
+
+.sendButton {
+   background:red
+}
+.textBlock {
+    padding:10px;
+}
+
+.dialog img {
+    width: 60px;
+}

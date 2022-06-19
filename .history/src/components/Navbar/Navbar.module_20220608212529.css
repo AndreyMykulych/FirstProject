@@ -1,0 +1,24 @@
+.nav {
+   grid-area: n;
+   background-color: Green;
+   padding: 20px;
+   width :100px
+ }
+
+ .item  a {
+    color: white;
+    text-decoration: none;
+ }
+ .item a.activeLink {
+    color: gold;
+ }
+ 
+ .item a.activetedLink {
+    color: red;
+ }
+
+.sidebarBlock {
+color:white;
+position : absolute;
+top : 400px;
+}

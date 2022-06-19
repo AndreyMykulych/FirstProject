@@ -1,0 +1,30 @@
+.dialogs {
+    display: grid;
+    height: 500px;
+    width: 1226px;
+    grid-template-columns: 2fr 4fr;
+    
+}
+.dialogsNames{
+    padding: 10px;
+  
+    
+}
+.dialog{
+   color: white;
+
+}
+
+.messages {
+    padding: 10px;
+
+}
+
+.message {
+    color: white;
+
+}
+
+.sendButton {
+   background:red
+}

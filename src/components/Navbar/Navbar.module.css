@@ -1,11 +1,11 @@
 .nav {
    grid-area: n;
-   background-color: burlywood;
+   background-color: Green;
    padding: 20px;
    width :100px
  }
 
- .item a {
+ .item  a {
     color: white;
     text-decoration: none;
  }
@@ -14,5 +14,12 @@
  }
  
  .item a.activetedLink {
-    color: red
+    color: red;
  }
+
+.sidebarBlock {
+color:white;
+position : absolute;
+top : 400px;
+font-family:serif;
+}
