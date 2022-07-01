@@ -24,8 +24,8 @@ const dispatchToProps = (dispatch) => {
         setUsers: (users) => {
             dispatch(setUsersAC(users))
         },
-        setCurrentPage: (pageNumber) => {
-            dispatch(setCurrentPageAC(pageNumber))
+        setCurrentPage: (p) => {
+            dispatch(setCurrentPageAC(p))
         }
     }
     
