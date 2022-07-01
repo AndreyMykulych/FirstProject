@@ -1,28 +1,25 @@
-import React, { createRef } from "react";
+import React from "react";
 import s from './Dialogs.module.css'
-import { NavLink } from 'react-router-dom';
+
 import DialogName from "./DialogName/DialogName";
 import DialogMessage from "./DialogMessage/DialogMessage";
-import { sendMessageActionCreator , updateNewMessageTextActionCreator } from "../../redux/state";
+
 const Dialogs = (props) => {
-   
+  
     
-    let dialogElements = props.state.dialogs.map(d => <DialogName name={d.name} id={d.id} img={ d.img}/>)
-    let messagesElements = props.state.messages.map(m => <DialogMessage message={m.message} />)
+    let dialogElements = props.messagesPage.dialogs.map(d => <DialogName name={d.name} key={d.id} id={d.id} img={ d.img}/>)
+    let messagesElements = props.messagesPage.messages.map(m => <DialogMessage message={m.message} key={m.id}/>)
     let newMessageElement = React.createRef();
    
-    debugger;
    
     let sendMessage = () => {
-        let action = sendMessageActionCreator();
-        props.dispatch(action)
+        props.onSendMessage()
     }
     let onChangeMessage = () => {
         let body = newMessageElement.current.value;
-        let action = updateNewMessageTextActionCreator(body)
-        props.dispatch(action)
+       props.onChangeMessage(body)
     }
-
+    debugger;
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsNames}>
@@ -35,13 +32,13 @@ const Dialogs = (props) => {
                <div>{messagesElements}</div> 
             </div>
             <div className={s.textBlock}>
-                <span>
+                
                 <textarea
-                    placeholder="Enter your message"
+                   /* placeholder="Enter your message"*/
                     ref={newMessageElement}
-                    value={props.newDialogMessageText}
+                    value={props.messagesPage.newDialogMessage}
                     onChange={onChangeMessage}>
-                </textarea></span>
+                </textarea>
                 <div className={s.btnBlock}>
                     <button onClick={sendMessage}>send</button>
                 </div>
