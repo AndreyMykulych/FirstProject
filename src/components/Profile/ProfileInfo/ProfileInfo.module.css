@@ -11,3 +11,16 @@
   .descriptionBlock {
       padding: 10px;
   }
+  .descriptionBlock img{
+    width:70px;
+    height:70px;
+    
+    border-radius: 50px;
+  }
+  .descriptionBlock .aboutMe {
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+  .descriptionBlock .job img {
+      width : 40px;
+      height : 40px;
+  }
